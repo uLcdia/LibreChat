@@ -11,7 +11,8 @@ endpoints:
   custom:
     # APIpie
     - name: "APIpie"
-      apiKey: "${APIPIE_API_KEY}"
+      apiKey: "user_provided"
+      # apiKey: "${APIPIE_API_KEY}"
       baseURL: "https://apipie.ai/v1/"
       models:
         default: [
@@ -37,7 +38,7 @@ endpoints:
       summaryModel: "claude-3-haiku"
       dropParams: ["stream"]
       modelDisplayLabel: "APIpie"
-      
+
     # Perplexity
     - name: "Perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
