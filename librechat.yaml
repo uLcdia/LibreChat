@@ -35,7 +35,8 @@ endpoints:
       titleModel: "claude-3-haiku"
       summarize: false
       summaryModel: "claude-3-haiku"
-      modelDisplayLabel: "APIpie"
+      modelDisplayLabel: "Aperture"
+      # modelDisplayLabel: "APIpie"
       
     # Perplexity
     - name: "Perplexity"
