@@ -35,7 +35,6 @@ endpoints:
       titleModel: "claude-3-haiku"
       summarize: false
       summaryModel: "claude-3-haiku"
-      dropParams: ["stream"]
       modelDisplayLabel: "APIpie"
       
     # Perplexity
