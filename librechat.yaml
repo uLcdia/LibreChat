@@ -9,29 +9,8 @@ cache: true
 
 endpoints:
   custom:
-      # Perplexity
-      - name: "Perplexity"
-      apiKey: "${PERPLEXITY_API_KEY}"
-      baseURL: "https://api.perplexity.ai/"
-      models:
-        default: [
-          "mixtral-8x7b-instruct",
-          "llama-3-sonar-small-32k-chat",
-          "llama-3-sonar-small-32k-online",
-          "llama-3-sonar-large-32k-chat",
-          "llama-3-sonar-large-32k-online"
-          ]
-        fetch: false # fetching list of models is not supported
-      titleConvo: true
-      titleModel: "llama-3-sonar-small-32k-chat"
-      summarize: false
-      summaryModel: "llama-3-sonar-small-32k-chatt"
-      forcePrompt: false
-      dropParams: ["stop", "frequency_penalty"]
-      modelDisplayLabel: "Perplexity"
-
-      # APIpie
-      - name: "APIpie"
+    # APIpie
+    - name: "APIpie"
       apiKey: "${APIPIE_API_KEY}"
       baseURL: "https://apipie.ai/v1/"
       models:
@@ -58,6 +37,27 @@ endpoints:
       summaryModel: "claude-3-haiku"
       dropParams: ["stream"]
       modelDisplayLabel: "APIpie"
+      
+    # Perplexity
+    - name: "Perplexity"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://api.perplexity.ai/"
+      models:
+        default: [
+          "mixtral-8x7b-instruct",
+          "llama-3-sonar-small-32k-chat",
+          "llama-3-sonar-small-32k-online",
+          "llama-3-sonar-large-32k-chat",
+          "llama-3-sonar-large-32k-online"
+          ]
+        fetch: false # fetching list of models is not supported
+      titleConvo: true
+      titleModel: "llama-3-sonar-small-32k-chat"
+      summarize: false
+      summaryModel: "llama-3-sonar-small-32k-chatt"
+      forcePrompt: false
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Perplexity"
 # Custom interface configuration
 # interface:
 #   # Privacy policy settings
