@@ -10,7 +10,7 @@ cache: true
 endpoints:
   custom:
     # APIpie
-    - name: "APIpie"
+    - name: "Aperture"
       apiKey: "${APIPIE_API_KEY}"
       baseURL: "https://apipie.ai/v1/"
       models:
