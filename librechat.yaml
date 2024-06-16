@@ -15,26 +15,19 @@ endpoints:
       baseURL: "https://apipie.ai/v1/"
       models:
         default: [
+          "openai/gpt-4o",
           "gpt-4o",
           "gpt-3.5-turbo",
           "gemini-pro-1.5",
           "gemini-flash-1.5",
-          "claude-3-opus",
-          "claude-3-sonnet",
-          "claude-3-haiku",
           "llama-3-70b-instruct",
-          "llama-3-8b-instruct",
-          "mistral-large",
-          "mistral-medium",
-          "mistral-small",
-          "mistral-tiny",
-          "mixtral-8x22b",
+          "llama-3-8b-instruct"
           ]
         fetch: false
       titleConvo: true
-      titleModel: "claude-3-haiku"
+      titleModel: "llama-3-8b-instruct"
       summarize: false
-      summaryModel: "claude-3-haiku"
+      summaryModel: "llama-3-8b-instruct"
       modelDisplayLabel: "Aperture"
       # modelDisplayLabel: "APIpie"
       
