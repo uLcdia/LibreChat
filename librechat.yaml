@@ -15,11 +15,11 @@ endpoints:
       baseURL: "https://apipie.ai/v1/"
       models:
         default: [
-          "openai/gpt-4o",
           "gpt-4o",
           "gpt-3.5-turbo",
           "gemini-pro-1.5",
           "gemini-flash-1.5",
+          "claude-3.5-sonnet",
           "llama-3-70b-instruct",
           "llama-3-8b-instruct"
           ]
