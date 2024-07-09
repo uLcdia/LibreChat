@@ -16,7 +16,7 @@ endpoints:
       models:
         default: [
           "gpt-4o",
-          "gpt-4o-2024-05-1",
+          "gpt-4o-2024-05-13",
           "gpt-3.5-turbo",
           "gemini-pro-1.5",
           "gemini-flash-1.5",
