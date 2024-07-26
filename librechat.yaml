@@ -10,28 +10,46 @@ cache: true
 endpoints:
   custom:
     # APIpie
-    - name: "APIpie"
-      apiKey: "${APIPIE_API_KEY}"
-      baseURL: "https://apipie.ai/v1/"
+    # - name: "APIpie"
+    #   apiKey: "${APIPIE_API_KEY}"
+    #   baseURL: "https://apipie.ai/v1/"
+    #   models:
+    #     default: [
+    #       "gpt-4o",
+    #       "gpt-4o-2024-05-13",
+    #       "gpt-3.5-turbo",
+    #       "gemini-pro-1.5",
+    #       "gemini-flash-1.5",
+    #       "claude-3.5-sonnet",
+    #       "llama-3-70b-instruct",
+    #       "llama-3-8b-instruct"
+    #       ]
+    #     fetch: false
+    #   titleConvo: true
+    #   titleModel: "llama-3-8b-instruct"
+    #   summarize: false
+    #   summaryModel: "llama-3-8b-instruct"
+    #   modelDisplayLabel: "Aperture"
+    - name: 'OpenRouter'
+      # For `apiKey` and `baseURL`, you can use environment variables that you define.
+      # recommended environment variables:
+      # Known issue: you should not use `OPENROUTER_API_KEY` as it will then override the `openAI` endpoint to use OpenRouter as well.
+      apiKey: '${OPENROUTER_KEY}'
+      baseURL: 'https://openrouter.ai/api/v1'
       models:
         default: [
-          "gpt-4o",
-          "gpt-4o-2024-05-13",
-          "gpt-4o-mini",
-          "gpt-4o-mini-2024-07-18",
-          "gpt-3.5-turbo",
-          "gemini-pro-1.5",
-          "gemini-flash-1.5",
-          "claude-3.5-sonnet",
-          "llama-3-70b-instruct",
-          "llama-3-8b-instruct"
+          'openai/gpt-4o',
+          'openai/gpt-4o-mini',
+          'anthropic/claude-3.5-sonnet',
+          'google/gemini-pro-1.5',
+          'google/gemini-flash-1.5'
           ]
-        fetch: false
+        fetch: true
       titleConvo: true
-      titleModel: "llama-3-8b-instruct"
-      summarize: false
-      summaryModel: "llama-3-8b-instruct"
-      modelDisplayLabel: "Aperture"
+      titleModel: 'openai/gpt-4o-mini'
+      # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
+      dropParams: ['stop']
+      modelDisplayLabel: 'Aperture'
       
 # Custom interface configuration
 # interface:
