@@ -46,10 +46,10 @@ endpoints:
           ]
         fetch: false
       titleConvo: true
-      titleModel: 'openai/gpt-4o-mini'
+      titleModel: 'google/gemini-flash-1.5'
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
       dropParams: ['stop']
-      modelDisplayLabel: 'Aperture'
+      modelDisplayLabel: 'OpenRouter'
       
 # Custom interface configuration
 # interface:
