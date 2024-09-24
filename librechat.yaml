@@ -9,27 +9,6 @@ cache: true
 
 endpoints:
   custom:
-    # APIpie
-    # - name: "APIpie"
-    #   apiKey: "${APIPIE_API_KEY}"
-    #   baseURL: "https://apipie.ai/v1/"
-    #   models:
-    #     default: [
-    #       "gpt-4o",
-    #       "gpt-4o-2024-05-13",
-    #       "gpt-3.5-turbo",
-    #       "gemini-pro-1.5",
-    #       "gemini-flash-1.5",
-    #       "claude-3.5-sonnet",
-    #       "llama-3-70b-instruct",
-    #       "llama-3-8b-instruct"
-    #       ]
-    #     fetch: false
-    #   titleConvo: true
-    #   titleModel: "llama-3-8b-instruct"
-    #   summarize: false
-    #   summaryModel: "llama-3-8b-instruct"
-    #   modelDisplayLabel: "Aperture"
     - name: 'OpenRouter'
       # For `apiKey` and `baseURL`, you can use environment variables that you define.
       # recommended environment variables:
@@ -41,8 +20,17 @@ endpoints:
           'openai/gpt-4o',
           'openai/gpt-4o-mini',
           'anthropic/claude-3.5-sonnet',
+          'anthropic/claude-3.5-sonnet:beta',
+          'microsoft/wizardlm-2-8x22b',
+          'mistralai/mistral-7b-instruct-v0.1',
+          'meta-llama/llama-3.1-8b-instruct:free',
+          'meta-llama/llama-3.1-8b-instruct',
+          'meta-llama/llama-3.1-70b-instruct',
+          'meta-llama/llama-3.1-405b-instruct',
           'google/gemini-pro-1.5',
-          'google/gemini-flash-1.5'
+          'google/gemini-flash-1.5',
+          'openai/o1-mini',
+          'openai/o1-preview'
           ]
         fetch: false
       titleConvo: true
