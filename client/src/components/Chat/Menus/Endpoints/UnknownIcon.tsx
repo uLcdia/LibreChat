@@ -4,7 +4,8 @@ import { IconContext } from '~/common';
 
 const knownEndpointAssets = {
   [KnownEndpoints.anyscale]: '/assets/anyscale.png',
-  [KnownEndpoints.apipie]: '/assets/apipie.png',
+  [KnownEndpoints.apipie]: '/assets/aperture.png',
+//  [KnownEndpoints.apipie]: '/assets/apipie.png',
   [KnownEndpoints.cohere]: '/assets/cohere.png',
   [KnownEndpoints.deepseek]: '/assets/deepseek.svg',
   [KnownEndpoints.fireworks]: '/assets/fireworks.png',
@@ -13,7 +14,8 @@ const knownEndpointAssets = {
   [KnownEndpoints.mistral]: '/assets/mistral.png',
   [KnownEndpoints.mlx]: '/assets/mlx.png',
   [KnownEndpoints.ollama]: '/assets/ollama.png',
-  [KnownEndpoints.openrouter]: '/assets/openrouter.png',
+  [KnownEndpoints.openrouter]: '/assets/aperture.png',
+//  [KnownEndpoints.openrouter]: '/assets/openrouter.png',
   [KnownEndpoints.perplexity]: '/assets/perplexity.png',
   [KnownEndpoints.shuttleai]: '/assets/shuttleai.png',
   [KnownEndpoints['together.ai']]: '/assets/together.png',

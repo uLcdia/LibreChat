@@ -1,0 +1,101 @@
+# For more information, see the Configuration Guide:
+# https://www.librechat.ai/docs/configuration/librechat_yaml
+
+# Configuration version (required)
+version: 1.0.9
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+endpoints:
+  custom:
+    # APIpie
+    # - name: "APIpie"
+    #   apiKey: "${APIPIE_API_KEY}"
+    #   baseURL: "https://apipie.ai/v1/"
+    #   models:
+    #     default: [
+    #       "gpt-4o",
+    #       "gpt-4o-2024-05-13",
+    #       "gpt-3.5-turbo",
+    #       "gemini-pro-1.5",
+    #       "gemini-flash-1.5",
+    #       "claude-3.5-sonnet",
+    #       "llama-3-70b-instruct",
+    #       "llama-3-8b-instruct"
+    #       ]
+    #     fetch: false
+    #   titleConvo: true
+    #   titleModel: "llama-3-8b-instruct"
+    #   summarize: false
+    #   summaryModel: "llama-3-8b-instruct"
+    #   modelDisplayLabel: "Aperture"
+    - name: 'OpenRouter'
+      # For `apiKey` and `baseURL`, you can use environment variables that you define.
+      # recommended environment variables:
+      # Known issue: you should not use `OPENROUTER_API_KEY` as it will then override the `openAI` endpoint to use OpenRouter as well.
+      apiKey: '${OPENROUTER_KEY}'
+      baseURL: 'https://openrouter.ai/api/v1'
+      models:
+        default: [
+          'openai/gpt-4o',
+          'openai/gpt-4o-mini',
+          'anthropic/claude-3.5-sonnet',
+          'google/gemini-pro-1.5',
+          'google/gemini-flash-1.5'
+          ]
+        fetch: false
+      titleConvo: true
+      titleModel: 'google/gemini-flash-1.5'
+      # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
+      dropParams: ['stop']
+      modelDisplayLabel: 'OpenRouter'
+      
+# Custom interface configuration
+# interface:
+#   # Privacy policy settings
+#   privacyPolicy:
+#     externalUrl: 'https://librechat.ai/privacy-policy'
+#     openNewTab: true
+# 
+#   # Terms of service
+#   termsOfService:
+#     externalUrl: 'https://librechat.ai/tos'
+#     openNewTab: true
+# 
+# # Example Registration Object Structure (optional)
+# # registration:
+#   socialLogins: ['github', 'google', 'discord', 'openid', 'facebook']
+#   # allowedDomains:
+#   # - "gmail.com"
+
+# tts:
+#   url: ''
+#   apiKey: '${TTS_API_KEY}'
+#   model: ''
+#   backend: ''
+#   voice: ''
+#   compatibility: ''
+#   voice_settings:
+#     similarity_boost: ''
+#     stability: ''
+#     style: ''
+#     use_speaker_boost:
+#   pronunciation_dictionary_locators: ['']
+#  
+# stt:
+#   url: ''
+#   apiKey: '${STT_API_KEY}'
+#   model: ''
+
+# rateLimits:
+#   fileUploads:
+#     ipMax: 100
+#     ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
+#     userMax: 50
+#     userWindowInMinutes: 60  # Rate limit window for file uploads per user
+#   conversationsImport:
+#     ipMax: 100
+#     ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
+#     userMax: 50
+#     userWindowInMinutes: 60  # Rate limit window for conversation imports per user
