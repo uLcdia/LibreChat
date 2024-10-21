@@ -17,24 +17,19 @@ endpoints:
       baseURL: 'https://openrouter.ai/api/v1'
       models:
         default: [
-          'openai/gpt-4o',
-          'openai/gpt-4o-mini',
-          'anthropic/claude-3.5-sonnet',
           'anthropic/claude-3.5-sonnet:beta',
           'microsoft/wizardlm-2-8x22b',
-          'mistralai/mistral-7b-instruct-v0.1',
-          'meta-llama/llama-3.1-8b-instruct:free',
-          'meta-llama/llama-3.1-8b-instruct',
-          'meta-llama/llama-3.1-70b-instruct',
-          'meta-llama/llama-3.1-405b-instruct',
-          'google/gemini-pro-1.5',
-          'google/gemini-flash-1.5',
+          'nousresearch/hermes-3-llama-3.1-405b:free',
+          'nousresearch/hermes-3-llama-3.1-405b',
+          'openai/gpt-4o',
+          'openai/gpt-4o-mini',
           'openai/o1-mini',
-          'openai/o1-preview'
+          'mistralai/mistral-nemo',
+          'google/gemini-flash-1.5'
           ]
         fetch: false
       titleConvo: true
-      titleModel: 'google/gemini-flash-1.5'
+      titleModel: 'openai/gpt-4o-mini'
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
       dropParams: ['stop']
       modelDisplayLabel: 'OpenRouter'
